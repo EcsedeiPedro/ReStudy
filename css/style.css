@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: white;
 }
 
 html, body {
@@ -16,7 +17,7 @@ body {
 
 main {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background-image: url(../images/bg.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -27,6 +28,11 @@ main {
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
+}
+@media (max-width: 1200px) {
+  .container {
+    max-width: 95%;
+  }
 }
 
 a {
@@ -45,8 +51,8 @@ main header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 92px;
+  padding-bottom: 92px;
 }
 main header nav .menu {
   display: flex;
@@ -81,6 +87,101 @@ main header nav .menu .radio::before {
 }
 main header nav .menu .login::before {
   background-image: url(../images/user.png);
+}
+@media (max-width: 1199px) {
+  main header nav {
+    position: absolute;
+    left: -1000px;
+  }
+}
+main header .menu-toggle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+}
+main header .menu-toggle::before {
+  content: "";
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  top: 0;
+  width: 27px;
+  height: 3px;
+}
+main header .menu-toggle div {
+  width: 27px;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+main header .menu-toggle::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  bottom: 0;
+  width: 27px;
+  height: 3px;
+}
+@media (min-width: 1200px) {
+  main header .menu-toggle {
+    display: none;
+  }
+}
+
+main .pomodoro .container {
+  background: rgba(0, 0, 0, 0.38);
+  border-radius: 15px;
+  width: 720px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 55px;
+  padding-top: 50px;
+  padding-right: 55px;
+  padding-bottom: 50px;
+}
+main .pomodoro .timer-options {
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 88px;
+}
+main .pomodoro .timer-options .item {
+  font-size: 16px;
+}
+main .pomodoro .timer-options .item + .item {
+  margin-left: 60px;
+}
+main .pomodoro .timer {
+  font-size: 72px;
+  margin-bottom: 24px;
+}
+main .pomodoro button {
+  cursor: pointer;
+  background-color: white;
+  margin-bottom: 84px;
+  padding: 16px 48px;
+  font-size: 16px;
+  color: #470A6D;
+  border: none;
+  border-radius: 8px;
+}
+main .pomodoro .clocks {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .pomodoro .clocks span {
+  cursor: pointer;
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=style.css.map */
