@@ -1,0 +1,68 @@
+main {
+  header {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: {
+        top: 60px;
+        bottom: 60px;
+      }
+    }
+
+    .logo {
+    }
+
+    nav {
+      .menu {
+        display: flex;
+
+        .item {
+          padding-left: 35px;
+          position: relative;
+          display: flex;
+          align-items: center;
+
+          a {
+            color: white;
+          }
+
+          + .item {
+            margin-left: 28px;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-62%);
+
+            background: {
+              image: url(../images/sobre.png);
+              position: center center;
+              repeat: no-repeat;
+              size: cover;
+            }
+
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        .radio {
+          &::before {
+            background-image: url(../images/radio.png);
+          }
+        }
+
+        .login {
+          &::before {
+            background-image: url(../images/user.png);
+          }
+        }
+      }
+    }
+  }
+}
