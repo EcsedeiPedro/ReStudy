@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Pomoyo</title>
+    <title>ReStudy</title>
   </head>
 
   <body>
@@ -42,20 +42,35 @@
 
           <nav>
             <ul class="timer-options">
-              <li class="item">Pomodoro</li>
-              <li class="item">Pausa Curta</li>
-              <li class="item">Pausa Longa</li>
+              <li class="item" id="pomodoro">Pomodoro</li>
+              <li class="item" id="short_break">Pausa Curta</li>
+              <li class="item" id="long_break">Pausa Longa</li>
             </ul>
           </nav>
 
-          <span class="timer">25:00</span>
+          <div class="timer">
+            <p id="minutes">25</p>
+            <p>:</p>
+            <p id="seconds">00</p>
+          </div>
 
-          <button>Iniciar</button>
+          <div class="buttons">
 
-          <div class="clocks">
-            <span>Tempo restante</span>
-            <span>Tempo restante</span>
-            <span>Tempo restante</span>
+            <button id="reset">
+              <i class="fa-solid fa-repeat"></i>
+              <p>Resetar</p>
+            </button>
+
+            <button id="play">
+              <i class="fa-solid fa-play"></i>
+              <p>Iniciar</p>
+            </button>
+
+            <button id="stopBtn">
+              <i class="fa-solid fa-pause"></i>
+              <p>Parar</p>
+            </button>
+
           </div>
 
         </div>
@@ -64,6 +79,7 @@
       
     </main>
 
+    <script src="https://kit.fontawesome.com/94d5240b71.js" crossorigin="anonymous"></script>
     <script src="./js/script.js"></script>
 
   </body>

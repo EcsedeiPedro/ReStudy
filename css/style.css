@@ -160,28 +160,25 @@ main .pomodoro .timer-options .item + .item {
   margin-left: 60px;
 }
 main .pomodoro .timer {
+  display: flex;
   font-size: 72px;
-  margin-bottom: 24px;
+  margin-bottom: 64px;
 }
-main .pomodoro button {
+main .pomodoro .buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+main .pomodoro .buttons button {
   cursor: pointer;
-  background-color: white;
-  margin-bottom: 84px;
-  padding: 16px 48px;
-  font-size: 16px;
+  background-color: transparent;
   color: #470A6D;
   border: none;
   border-radius: 8px;
 }
-main .pomodoro .clocks {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-main .pomodoro .clocks span {
-  cursor: pointer;
-  font-size: 14px;
+main .pomodoro .buttons button i {
+  font-size: 25px;
+  padding: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */

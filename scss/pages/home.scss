@@ -1,62 +1,59 @@
 main {
-    .pomodoro {
-        .container {
-            background: rgba(0, 0, 0, 0.38);
-            border-radius: 15px;
-            width: 720px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+  .pomodoro {
+    .container {
+      background: rgba(0, 0, 0, 0.38);
+      border-radius: 15px;
+      width: 720px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-            padding: {
-                left: 55px;
-                top: 50px;
-                right: 55px;
-                bottom: 50px;
-            };
-        }
-
-        .timer-options {
-            display: flex;
-            cursor: pointer;
-            margin-bottom: 88px;
-
-            .item {
-                font-size: 16px;
-
-                +.item {
-                    margin-left: 60px;
-                }
-            }
-        }
-
-        .timer {
-            font-size: 72px;
-            margin-bottom: 24px;
-        }
-
-        button {
-            cursor: pointer;
-            background-color: white;
-            margin-bottom: 84px;
-            padding: 16px 48px;
-            font-size: 16px;
-            color: $primary-color;
-            border: none;
-            border-radius: 8px;
-        }
-
-        .clocks {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-
-            span {
-                cursor: pointer;
-                font-size: 14px;
-            }
-        }
+      padding: {
+        left: 55px;
+        top: 50px;
+        right: 55px;
+        bottom: 50px;
+      }
     }
+
+    .timer-options {
+      display: flex;
+      cursor: pointer;
+      margin-bottom: 88px;
+
+      .item {
+        font-size: 16px;
+
+        + .item {
+          margin-left: 60px;
+        }
+      }
+    }
+
+    .timer {
+      display: flex;
+      font-size: 72px;
+      margin-bottom: 64px;
+    }
+
+    .buttons {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+
+      button {
+        cursor: pointer;
+        background-color: transparent;
+        color: $primary-color;
+        border: none;
+        border-radius: 8px;
+
+        i {
+            font-size: 25px;
+            padding: 12px;
+        }
+      }
+    }
+  }
 }
