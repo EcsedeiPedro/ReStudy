@@ -1,8 +1,8 @@
 //variáveis
-
 let pomodoro = document.getElementById("pomodoro");
 let shortBreak = document.getElementById("short_break");
 let longBreak = document.getElementById("long_break");
+let playLabel = document.getElementById("play_label");
 
 console.log(shortBreak, longBreak);
 
@@ -32,6 +32,7 @@ function stopTimer() {
   clearInterval(startTimer);
 }
 
+//inicia a contagem // retoma a contagem
 play.addEventListener("click", function () {
   if (startTimer === undefined) {
     startTimer = setInterval(timer, 1000);
@@ -40,6 +41,7 @@ play.addEventListener("click", function () {
   }
 });
 
+//reseta o timer
 reset.addEventListener("click", function () {
   minutes.innerText = 25;
   seconds.innerText = "00";
@@ -47,9 +49,11 @@ reset.addEventListener("click", function () {
   startTimer = undefined;
 });
 
+//para o timer
 stopBtn.addEventListener("click", function () {
   stopTimer();
   startTimer = undefined;
+  playLabel.innerHTML == "Retomar";
 });
 
 //seleciona o timer escolhido
